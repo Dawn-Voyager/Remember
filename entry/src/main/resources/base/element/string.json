@@ -1,0 +1,180 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "Remember"
+    },
+    {
+      "name": "app_title",
+      "value": "Remember"
+    },
+    {
+      "name": "hint_input",
+      "value": "输入新的待办事项..."
+    },
+    {
+      "name": "btn_add",
+      "value": "添加"
+    },
+    {
+      "name": "empty_tip",
+      "value": "暂无待办事项，添加一个吧！"
+    },
+    {
+      "name": "btn_delete",
+      "value": "删除"
+    },
+    {
+      "name": "dialog_edit_title",
+      "value": "编辑待办"
+    },
+    {
+      "name": "dialog_confirm",
+      "value": "确认"
+    },
+    {
+      "name": "dialog_cancel",
+      "value": "取消"
+    },
+    {
+      "name": "stat_info",
+      "value": "待办: %s  已完成: %s"
+    },
+    {
+      "name": "priority_none",
+      "value": "无"
+    },
+    {
+      "name": "priority_low",
+      "value": "低"
+    },
+    {
+      "name": "priority_medium",
+      "value": "中"
+    },
+    {
+      "name": "priority_high",
+      "value": "高"
+    },
+    {
+      "name": "label_priority",
+      "value": "优先级"
+    },
+    {
+      "name": "label_category",
+      "value": "分类"
+    },
+    {
+      "name": "label_due_date",
+      "value": "到期日期"
+    },
+    {
+      "name": "hint_select_date",
+      "value": "选择日期"
+    },
+    {
+      "name": "hint_search",
+      "value": "搜索待办事项..."
+    },
+    {
+      "name": "btn_select_all",
+      "value": "全选"
+    },
+    {
+      "name": "btn_deselect_all",
+      "value": "取消全选"
+    },
+    {
+      "name": "btn_batch_delete",
+      "value": "批量删除"
+    },
+    {
+      "name": "btn_batch_complete",
+      "value": "批量完成"
+    },
+    {
+      "name": "sort_default",
+      "value": "默认排序"
+    },
+    {
+      "name": "sort_priority",
+      "value": "按优先级"
+    },
+    {
+      "name": "sort_due_date",
+      "value": "按到期日期"
+    },
+    {
+      "name": "sort_created",
+      "value": "按创建时间"
+    },
+    {
+      "name": "label_dark_mode",
+      "value": "深色模式"
+    },
+    {
+      "name": "filter_all",
+      "value": "全部"
+    },
+    {
+      "name": "filter_todo",
+      "value": "待办"
+    },
+    {
+      "name": "filter_done",
+      "value": "已完成"
+    },
+    {
+      "name": "msg_batch_deleted",
+      "value": "已删除 %s 项"
+    },
+    {
+      "name": "msg_batch_completed",
+      "value": "已完成 %s 项"
+    },
+    {
+      "name": "category_default",
+      "value": "默认"
+    },
+    {
+      "name": "category_work",
+      "value": "工作"
+    },
+    {
+      "name": "category_study",
+      "value": "学习"
+    },
+    {
+      "name": "category_life",
+      "value": "生活"
+    },
+    {
+      "name": "category_health",
+      "value": "健康"
+    },
+    {
+      "name": "category_other",
+      "value": "其他"
+    },
+    {
+      "name": "due_expired",
+      "value": "已过期"
+    },
+    {
+      "name": "due_today",
+      "value": "今天到期"
+    },
+    {
+      "name": "no_date",
+      "value": "无日期"
+    }
+  ]
+}

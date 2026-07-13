@@ -1,0 +1,60 @@
+{
+  "float": [
+    {
+      "name": "page_text_font_size",
+      "value": "50fp"
+    },
+    {
+      "name": "card_border_radius",
+      "value": "12vp"
+    },
+    {
+      "name": "card_padding",
+      "value": "16vp"
+    },
+    {
+      "name": "list_space",
+      "value": "8vp"
+    },
+    {
+      "name": "title_font_size",
+      "value": "28fp"
+    },
+    {
+      "name": "body_font_size",
+      "value": "16fp"
+    },
+    {
+      "name": "secondary_font_size",
+      "value": "12fp"
+    },
+    {
+      "name": "chip_font_size",
+      "value": "11fp"
+    },
+    {
+      "name": "chip_border_radius",
+      "value": "10vp"
+    },
+    {
+      "name": "chip_padding_h",
+      "value": "8vp"
+    },
+    {
+      "name": "chip_padding_v",
+      "value": "2vp"
+    },
+    {
+      "name": "priority_indicator_size",
+      "value": "8vp"
+    },
+    {
+      "name": "toolbar_height",
+      "value": "48vp"
+    },
+    {
+      "name": "search_bar_height",
+      "value": "40vp"
+    }
+  ]
+}
