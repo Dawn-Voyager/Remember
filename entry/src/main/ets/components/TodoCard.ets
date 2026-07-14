@@ -15,10 +15,9 @@ export struct TodoCard {
       return '';
     }
     const date: Date = new Date(timestamp);
-    const year: number = date.getFullYear();
     const month: number = date.getMonth() + 1;
     const day: number = date.getDate();
-    return `${year}-${month < 10 ? '0' + month : month}-${day < 10 ? '0' + day : day}`;
+    return `${month}月${day}日`;
   }
 
   private getPriorityColor(): ResourceStr {
@@ -32,6 +31,10 @@ export struct TodoCard {
       return $r('app.color.priority_low_color');
     }
     return '';
+  }
+
+  private hasPriority(): boolean {
+    return this.todoItem.priority !== Priority.None;
   }
 
   private getDueDateStatus(): string {
@@ -61,86 +64,91 @@ export struct TodoCard {
     return $r('app.color.text_secondary');
   }
 
+  private getTagSuffix(): string {
+    const parts: string[] = [];
+    if (this.todoItem.category !== '默认') {
+      parts.push(this.todoItem.category);
+    }
+    if (this.todoItem.dueDate !== 0) {
+      parts.push(this.formatDate(this.todoItem.dueDate));
+    }
+    if (this.todoItem.priority !== Priority.None) {
+      parts.push(PRIORITY_LABELS[this.todoItem.priority.toString()]);
+    }
+    if (parts.length === 0) {
+      return '';
+    }
+    return '  ' + parts.join('·');
+  }
+
   build() {
-    Row({ space: 12 }) {
+    Row({ space: 10 }) {
       if (this.isInBatchMode) {
         Toggle({ type: ToggleType.Checkbox, isOn: this.isBatchChecked })
-          .width(24)
-          .height(24)
+          .width(20)
+          .height(20)
           .selectedColor($r('app.color.accent_color'))
           .onChange((isOn: boolean) => {
             this.onBatchCheck(this.todoItem.id, isOn);
           })
       }
       Toggle({ type: ToggleType.Checkbox, isOn: this.todoItem.isCompleted })
-        .width(24)
-        .height(24)
+        .width(20)
+        .height(20)
         .selectedColor($r('app.color.accent_color'))
         .onChange((isOn: boolean) => {
           this.onToggle(this.todoItem.id);
         })
-      Column({ space: 4 }) {
-        Row({ space: 6 }) {
-          if (this.todoItem.priority !== Priority.None) {
-            Circle()
-              .width($r('app.float.priority_indicator_size'))
-              .height($r('app.float.priority_indicator_size'))
-              .fill(this.getPriorityColor())
-          }
-          Text(this.todoItem.content)
-            .fontSize($r('app.float.body_font_size'))
-            .fontColor(this.todoItem.isCompleted ? $r('app.color.text_secondary') : $r('app.color.text_primary'))
-            .decoration(this.todoItem.isCompleted ? { type: TextDecorationType.LineThrough, color: $r('app.color.text_secondary') } : { type: TextDecorationType.None, color: Color.Transparent })
-            .maxLines(2)
-            .textOverflow({ overflow: TextOverflow.Ellipsis })
-            .layoutWeight(1)
+      Row() {
+        if (this.hasPriority()) {
+          Circle()
+            .width(6)
+            .height(6)
+            .fill(this.getPriorityColor())
+            .margin({ right: 6 })
         }
-        .width('100%')
-        Row({ space: 8 }) {
-          if (this.todoItem.category !== '默认') {
-            Text(this.todoItem.category)
-              .fontSize($r('app.float.chip_font_size'))
-              .fontColor($r('app.color.chip_text_color'))
-              .backgroundColor($r('app.color.chip_background'))
-              .borderRadius($r('app.float.chip_border_radius'))
-              .padding({ left: $r('app.float.chip_padding_h'), right: $r('app.float.chip_padding_h'), top: $r('app.float.chip_padding_v'), bottom: $r('app.float.chip_padding_v') })
-          }
-          if (this.todoItem.dueDate !== 0) {
-            Row({ space: 4 }) {
-              Text(this.formatDate(this.todoItem.dueDate))
-                .fontSize($r('app.float.chip_font_size'))
-                .fontColor(this.getDueDateColor())
-            }
-          }
-          if (this.todoItem.priority !== Priority.None) {
-            Text(PRIORITY_LABELS[this.todoItem.priority.toString()])
-              .fontSize($r('app.float.chip_font_size'))
-              .fontColor(this.getPriorityColor())
-          }
-        }
+        Text(this.todoItem.content)
+          .fontSize(15)
+          .fontWeight(FontWeight.Medium)
+          .fontColor(this.todoItem.isCompleted ? $r('app.color.completed_text_color') : $r('app.color.text_primary'))
+          .decoration(this.todoItem.isCompleted ? { type: TextDecorationType.LineThrough, color: $r('app.color.completed_text_color') } : { type: TextDecorationType.None, color: Color.Transparent })
+          .maxLines(1)
+          .textOverflow({ overflow: TextOverflow.Ellipsis })
+          .layoutWeight(1)
       }
+      .width(0)
       .layoutWeight(1)
-      .alignItems(HorizontalAlign.Start)
+      .alignItems(VerticalAlign.Center)
       .onClick(() => {
         this.onEditRequest(this.todoItem.id, this.todoItem.content);
       })
-      Blank()
+      Text(this.getTagSuffix().length > 0 ? this.getTagSuffix().trim() : '')
+        .fontSize(11)
+        .fontColor($r('app.color.text_secondary'))
+        .maxLines(1)
+        .textOverflow({ overflow: TextOverflow.Ellipsis })
+        .width(100)
+        .textAlign(TextAlign.Start)
+        .onClick(() => {
+          this.onEditRequest(this.todoItem.id, this.todoItem.content);
+        })
       Button({ type: ButtonType.Circle }) {
         Text('\u2715')
-          .fontSize(16)
+          .fontSize(12)
           .fontColor($r('app.color.delete_color'))
       }
-      .width(36)
-      .height(36)
+      .width(28)
+      .height(28)
       .backgroundColor(Color.Transparent)
       .onClick(() => {
         this.onDelete(this.todoItem.id);
       })
     }
     .width('100%')
-    .padding($r('app.float.card_padding'))
+    .padding({ left: 14, right: 10, top: 10, bottom: 10 })
     .backgroundColor($r('app.color.card_background'))
-    .borderRadius($r('app.float.card_border_radius'))
+    .borderRadius(14)
+    .shadow({ radius: 8, color: $r('app.color.card_shadow_color'), offsetY: 2 })
     .alignItems(VerticalAlign.Center)
   }
 }

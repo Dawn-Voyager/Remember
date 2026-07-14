@@ -6,7 +6,7 @@
     },
     {
       "name": "card_border_radius",
-      "value": "12vp"
+      "value": "16vp"
     },
     {
       "name": "card_padding",
@@ -14,11 +14,11 @@
     },
     {
       "name": "list_space",
-      "value": "8vp"
+      "value": "10vp"
     },
     {
       "name": "title_font_size",
-      "value": "28fp"
+      "value": "26fp"
     },
     {
       "name": "body_font_size",
@@ -26,27 +26,27 @@
     },
     {
       "name": "secondary_font_size",
-      "value": "12fp"
+      "value": "13fp"
     },
     {
       "name": "chip_font_size",
-      "value": "11fp"
+      "value": "12fp"
     },
     {
       "name": "chip_border_radius",
-      "value": "10vp"
+      "value": "12vp"
     },
     {
       "name": "chip_padding_h",
-      "value": "8vp"
+      "value": "12vp"
     },
     {
       "name": "chip_padding_v",
-      "value": "2vp"
+      "value": "4vp"
     },
     {
       "name": "priority_indicator_size",
-      "value": "8vp"
+      "value": "10vp"
     },
     {
       "name": "toolbar_height",
@@ -54,7 +54,35 @@
     },
     {
       "name": "search_bar_height",
-      "value": "40vp"
+      "value": "44vp"
+    },
+    {
+      "name": "fab_size",
+      "value": "56vp"
+    },
+    {
+      "name": "priority_bar_width",
+      "value": "4vp"
+    },
+    {
+      "name": "header_padding_top",
+      "value": "20vp"
+    },
+    {
+      "name": "header_padding_bottom",
+      "value": "24vp"
+    },
+    {
+      "name": "stat_number_size",
+      "value": "28fp"
+    },
+    {
+      "name": "stat_label_size",
+      "value": "11fp"
+    },
+    {
+      "name": "search_icon_size",
+      "value": "18fp"
     }
   ]
 }

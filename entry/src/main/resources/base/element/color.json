@@ -2,63 +2,71 @@
   "color": [
     {
       "name": "start_window_background",
-      "value": "#FFFFFF"
+      "value": "#667EEA"
     },
     {
       "name": "page_background",
-      "value": "#F5F5F5"
+      "value": "#F0F2F5"
     },
     {
       "name": "card_background",
       "value": "#FFFFFF"
     },
     {
+      "name": "header_gradient_start",
+      "value": "#667EEA"
+    },
+    {
+      "name": "header_gradient_end",
+      "value": "#764BA2"
+    },
+    {
       "name": "text_primary",
-      "value": "#333333"
+      "value": "#1A1A2E"
     },
     {
       "name": "text_secondary",
-      "value": "#999999"
+      "value": "#8E8E93"
     },
     {
       "name": "accent_color",
-      "value": "#4A90D9"
+      "value": "#667EEA"
     },
     {
       "name": "delete_color",
-      "value": "#E74C3C"
+      "value": "#FF6B6B"
     },
     {
       "name": "divider_color",
-      "value": "#EEEEEE"
+      "value": "#E8E8ED"
     },
     {
       "name": "priority_high_color",
-      "value": "#E74C3C"
+      "value": "#FF6B6B"
     },
     {
       "name": "priority_medium_color",
-      "value": "#F39C12"
+      "value": "#FFB84D"
     },
     {
       "name": "priority_low_color",
-      "value": "#27AE60"
+      "value": "#4ECDC4"
     },
     {
       "name": "chip_background",
-      "value": "#EEEEEE"
+      "value": "#F2F2F7"
     },
     {
       "name": "chip_text_color",
-      "value": "#666666"
+      "value": "#8E8E93"
     },
     {
       "name": "search_background",
-      "value": "#FFFFFF"
+      "value": "#F2F2F7"
     },
     {
       "name": "filter_active_bg",
-      "value": "#4A90D9"
+      "value": "#667EEA"
     },
     {
       "name": "filter_active_text",
@@ -66,19 +74,19 @@
     },
     {
       "name": "filter_inactive_bg",
-      "value": "#EEEEEE"
+      "value": "#F2F2F7"
     },
     {
       "name": "filter_inactive_text",
-      "value": "#666666"
+      "value": "#8E8E93"
     },
     {
       "name": "due_expired_color",
-      "value": "#E74C3C"
+      "value": "#FF6B6B"
     },
     {
       "name": "due_soon_color",
-      "value": "#F39C12"
+      "value": "#FFB84D"
     },
     {
       "name": "toolbar_background",
@@ -86,7 +94,35 @@
     },
     {
       "name": "dark_mode_icon_color",
-      "value": "#666666"
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "fab_shadow_color",
+      "value": "#33764BA2"
+    },
+    {
+      "name": "card_shadow_color",
+      "value": "#0A000000"
+    },
+    {
+      "name": "header_text_color",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "stat_card_bg",
+      "value": "#0DFFFFFF"
+    },
+    {
+      "name": "completed_text_color",
+      "value": "#C7C7CC"
+    },
+    {
+      "name": "checkbox_border_color",
+      "value": "#D1D1D6"
+    },
+    {
+      "name": "dialog_overlay",
+      "value": "#66000000"
     }
   ]
 }
